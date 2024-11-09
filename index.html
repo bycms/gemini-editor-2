@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Microsoft Word Online UI Replica</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <body>
+      <div class="toolbar">
+        <!-- Font Size -->
+        <label for="fontSize">Font Size:</label>
+        <select id="fontSize" onchange="document.execCommand('fontSize', false, this.value)">
+            <option value="1">1</option>
+            <option value="3" selected>3</option>
+            <option value="5">5</option>
+            <option value="7">7</option>
+        </select>
+
+        <!-- Font Style -->
+        <label>Font Style:</label>
+        <button class="formats bold" onclick="document.execCommand('bold', false, '')"><b>Bold</b></button>
+        <button class="formats italic" onclick="document.execCommand('italic', false, '')"><i>Italic</i></button>
+        <button class="formats underline" onclick="document.execCommand('underline', false, '')"><u>Underline</u></button>
+
+        <!-- Font Color -->
+        <label for="fontColor">Font Color:</label>
+        <input id="fontColor" type="color" onchange="document.execCommand('foreColor', false, this.value)" />
+
+        <!-- Background Color -->
+        <label for="bgColor">Background Color:</label>
+        <input id="bgColor" type="color" onchange="document.execCommand('backColor', false, this.value)" />
+    </div>
+
+    <!-- Content Editable Area -->
+    <div class="editor" contenteditable="true">
+        
+    </div>
+
+    <!-- Flexible Chat -->
+     <div class="flexbox">
+      <input type="text" placeholder="Type your request..." class="flexinput"/>
+      <button class="flexbutton">Send</button>
+      <button class="flexhide">Cancel</button>
+     </div>
+  </body>
+  <script src="script.js"></script>
+</html>

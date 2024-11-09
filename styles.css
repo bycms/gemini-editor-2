@@ -1,0 +1,76 @@
+body {
+  font-family: 'Segoe UI';
+}
+
+.toolbar {
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  background-color: rgb(41, 139, 219);
+}
+
+#fontSize, #fontColor, #bgColor{
+  width: 45px;
+  height: 20px;
+  background-color: white;
+  border-radius: 5px;
+}
+
+.formats {
+  width: 75px;
+  height: 25px;
+  background-color: white;
+  border: none;
+  border-radius: 5px;
+}
+
+.editor {
+  border: 1px solid #ddd;
+  padding: 10px;
+  min-height: 200px;
+}
+
+.toolbar label, .toolbar button, .toolbar select {
+  margin-right: 5px;
+}
+
+.editor {
+  position: relative;
+  font-family: 'Segoe UI';
+  height: calc(100vh - 100px);
+  width: 98vw;
+  border: 2px solid rgb(41, 83, 219);
+  border-radius: 15px;
+}
+
+.flexbox {
+  padding: 2px;
+  height: 30px;
+  width: 345px;
+  border: 2px solid rgb(41, 83, 219);
+  border-radius: 12px;
+}
+
+.flexbox input[type="text"] {
+  position: relative;
+  left: 4px;
+  top: 2px;
+  width: 200px;
+  height: 20px;
+  border: none;
+  border-radius: 8px;
+}
+
+.flexbox input[type="text"]:target {
+  border: rgb(41, 83, 219);
+}
+
+.flexbutton, .flexhide {
+  position: relative;
+  left: 5px;
+  top: 2px;
+  width: 60px;
+  height: 25px;
+  border: none;
+  border-radius: 8px;
+}
