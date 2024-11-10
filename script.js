@@ -1,6 +1,6 @@
-//import { GoogleGenerativeAI } from "@google/generative-ai";
-//import { processText } from "./processText.js";
+const { GoogleGenerativeAI } = require('@google/generative-ai');
 const editor = document.getElementsByClassName('editor');
+const editPrompt = document.getElementsByClassName('flexinput');
 
 // top bar formats
     const formats = document.querySelectorAll('.formats');
@@ -40,3 +40,23 @@ const editor = document.getElementsByClassName('editor');
       });
 
 // google gemini api
+async function callAI(ev) {
+    ev.preventDefault();
+
+    try {
+        const genAI = new GoogleGenerativeAI("AIzaSyBmVYOrJrwN0l4cODZOW7NwXl8ysg-kl8E");
+		const model = genAI.getGenerativeModel({
+      			model: "gemini-1.5-flash"
+   		 });
+
+        const prompt = editPrompt.value;
+        const result = await model.generateContentStream(prompt);
+    
+        editor.innerHTML = processText(result);
+    }
+    catch (e) {
+        alert(e);
+    }
+}
+
+// process result text
