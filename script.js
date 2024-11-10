@@ -62,7 +62,7 @@ async function callAI(ev) {
         editor.innerHTML = result;
     }
     catch (e) {
-        alert(e);
+        alert("An error occured calling Generative AI: " + e);
     }
 }
 
