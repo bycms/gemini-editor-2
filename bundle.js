@@ -1508,6 +1508,12 @@ const editPrompt = document.getElementsByClassName('flexinput');
       });
 
 // google gemini api
+const flexbutton = document.getElementsByClassName('flexbutton')[0];
+
+flexbutton.onclick =()=> {
+    callAI();
+}
+
 async function callAI(ev) {
     ev.preventDefault();
 
@@ -1518,9 +1524,10 @@ async function callAI(ev) {
    		 });
 
         const prompt = editPrompt.value;
+        editPrompt.value = "";
         const result = await model.generateContentStream(prompt);
     
-        editor.innerHTML = processText(result);
+        editor.innerHTML = result;
     }
     catch (e) {
         alert(e);
