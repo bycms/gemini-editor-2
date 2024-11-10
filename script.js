@@ -52,7 +52,7 @@ async function callAI(ev) {
         const prompt = editPrompt.value;
         const result = await model.generateContentStream(prompt);
     
-        editor.innerHTML = processText(result);
+        editor.innerHTML = result;
     }
     catch (e) {
         alert(e);
