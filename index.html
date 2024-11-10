@@ -13,8 +13,11 @@
         <label for="fontSize">Font Size:</label>
         <select id="fontSize" onchange="document.execCommand('fontSize', false, this.value)">
             <option value="1">1</option>
+            <option value="2">2</option>
             <option value="3" selected>3</option>
+            <option value="4">4</option>
             <option value="5">5</option>
+            <option value="6">6</option>
             <option value="7">7</option>
         </select>
 
@@ -25,11 +28,11 @@
         <button class="formats underline" onclick="document.execCommand('underline', false, '')"><u>Underline</u></button>
 
         <!-- Font Color -->
-        <label for="fontColor">Font Color:</label>
+        <label>Font Color:</label>
         <input id="fontColor" type="color" onchange="document.execCommand('foreColor', false, this.value)" />
 
         <!-- Background Color -->
-        <label for="bgColor">Background Color:</label>
+        <label>Background Color:</label>
         <input id="bgColor" type="color" onchange="document.execCommand('backColor', false, this.value)" />
     </div>
 
@@ -42,7 +45,7 @@
      <div class="flexbox">
       <input type="text" placeholder="Type your request..." class="flexinput"/>
       <button class="flexbutton">Send</button>
-      <button class="flexhide">Cancel</button>
+      <button class="flexhide" onclick="flexbox.style.display = 'none'">Cancel</button>
      </div>
   </body>
   <script src="script.js"></script>

@@ -3,10 +3,12 @@ body {
 }
 
 .toolbar {
+  position: relative;
+  left: 20px;
   padding: 10px;
   margin-bottom: 10px;
   border-radius: 10px;
-  background-color: rgb(41, 139, 219);
+  background-color: rgb(101, 129, 206);
 }
 
 #fontSize, #fontColor, #bgColor{
@@ -14,6 +16,11 @@ body {
   height: 20px;
   background-color: white;
   border-radius: 5px;
+  outline: none;
+}
+
+#fontSize:hover, #fontColor:hover, #bgColor:hover {
+  background-color: rgb(149, 170, 228);
 }
 
 .formats {
@@ -25,6 +32,8 @@ body {
 }
 
 .editor {
+  position: relative;
+  left: 20px;
   border: 1px solid #ddd;
   padding: 10px;
   min-height: 200px;
@@ -37,18 +46,29 @@ body {
 .editor {
   position: relative;
   font-family: 'Segoe UI';
+  padding: 20px;
   height: calc(100vh - 100px);
-  width: 98vw;
+  width: 94vw;
   border: 2px solid rgb(41, 83, 219);
   border-radius: 15px;
+  outline: none;
+  z-index: 1;
 }
 
 .flexbox {
+  position: absolute;
   padding: 2px;
   height: 30px;
   width: 345px;
   border: 2px solid rgb(41, 83, 219);
   border-radius: 12px;
+  opacity: 0.6;
+  z-index: 2;
+  display: none;
+}
+
+.flexbox:hover {
+  opacity: 0.8;
 }
 
 .flexbox input[type="text"] {
@@ -58,11 +78,8 @@ body {
   width: 200px;
   height: 20px;
   border: none;
+  outline: none;
   border-radius: 8px;
-}
-
-.flexbox input[type="text"]:target {
-  border: rgb(41, 83, 219);
 }
 
 .flexbutton, .flexhide {
@@ -73,4 +90,9 @@ body {
   height: 25px;
   border: none;
   border-radius: 8px;
+  background-color: rgb(133, 161, 212);
+}
+
+.flexbutton:hover, .flexhide:hover {
+  background-color: rgb(83, 101, 182);
 }
