@@ -1,4 +1,4 @@
-//const { GoogleGenerativeAI } = require('@google/generative-ai');
+const { GoogleGenerativeAI } = require('@google/generative-ai');
 const editor = document.getElementsByClassName('editor');
 const editPrompt = document.getElementsByClassName('flexinput');
 
