@@ -1488,6 +1488,7 @@ const editPrompt = document.getElementsByClassName('flexinput');
 
 // following div
     const flexbox = document.querySelector('.flexbox');
+    const flexhide = document.querySelector('.flexhide');
     
     document.addEventListener('mouseup', function() {
         const selection = window.getSelection();
@@ -1507,6 +1508,10 @@ const editPrompt = document.getElementsByClassName('flexinput');
         }
       });
 
+    flexhide.onclick = () => {
+        flexbox.style.display = 'none';
+    }
+
 // google gemini api
 const flexbutton = document.getElementsByClassName('flexbutton')[0];
 
@@ -1514,9 +1519,7 @@ flexbutton.onclick =()=> {
     callAI();
 }
 
-async function callAI(ev) {
-    ev.preventDefault();
-
+async function callAI() {
     try {
         const genAI = new GoogleGenerativeAI("AIzaSyBmVYOrJrwN0l4cODZOW7NwXl8ysg-kl8E");
 		const model = genAI.getGenerativeModel({
